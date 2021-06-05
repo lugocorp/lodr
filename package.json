@@ -1,0 +1,13 @@
+{
+  "name": "lodr",
+  "version": "1.0.0",
+  "description": "A loading screen mini-library for the browser",
+  "scripts": {
+    "minify": "uglifyjs lodr.js --compress --mangle --warn --output lodr.min.js"
+  },
+  "author": "Alex Lugo",
+  "devDependencies": {},
+  "dependencies": {
+    "uglify-js": "^3.3.11"
+  }
+}
