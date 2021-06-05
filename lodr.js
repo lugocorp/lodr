@@ -19,7 +19,12 @@ lodr.progress=function(inc){
   }
   lodr.progression+=inc;
   let percent=Math.round(100*lodr.progression/lodr.goal);
-  lodr.root.querySelector(".text").innerHTML=lodr.getText(percent);
+  if(lodr.mode==="text"){
+    lodr.root.querySelector(".lodr-text").innerHTML=lodr.getText(percent);
+  }
+  if(lodr.mode==="bar"){
+    lodr.root.querySelector(".lodr-bar").style["width"]=`${Math.round(296*percent/100)}px`;
+  }
   if(lodr.progression>lodr.goal){
     lodr.progression=lodr.goal;
   }
@@ -55,6 +60,7 @@ lodr.goalpost=function(inc){
   Function to initialize the loading screen
 */
 lodr.load=function(options){
+  lodr.mode=options.mode;
 
   // Add basic loading div with css properties
   let div=document.createElement("div");
@@ -101,13 +107,28 @@ lodr.load=function(options){
     lodr.getText=options.text || (percent => `${percent}%`);
     let text=document.createElement("span");
     text.innerHTML=lodr.getText(0);
-    text.className="text";
+    text.className="lodr-text";
     wrapper.append(text);
   }
 
   // Handle bar mode
   if(options.mode==="bar"){
-
+    let border=document.createElement("div");
+    border.style["border"]=`solid 5px ${options.color || "black"}`;
+    border.style["display"]="inline-block";
+    border.style["height"]="25px";
+    border.style["width"]="300px";
+    let bar=document.createElement("span");
+    bar.style["background-color"]=options.color || "black";
+    bar.style["position"]="relative";
+    bar.style["display"]="block";
+    bar.style["height"]="21px";
+    bar.style["width"]="0px";
+    bar.style["left"]="2px";
+    bar.style["top"]="2px";
+    bar.className="lodr-bar";
+    wrapper.append(border);
+    border.append(bar);
   }
 
   // Add to document body
