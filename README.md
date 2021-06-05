@@ -1,7 +1,9 @@
-# Lodr
+<img src="lodr.svg" height="300px"/>
+
+# Lödr
 This is LugoCorp's browser-based HTML loading screen library.
 You can use the library to add cool loading screens to your websites.
-Lodr does not require any other JavaScript libraries to run properly.
+Lödr does not require any other JavaScript libraries to run properly.
 
 ## Scripts
 You may want to minify the `lodr.js` script so it takes up less bandwidth in production.
