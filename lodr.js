@@ -87,19 +87,21 @@ lodr.load=function(options){
   if(options.image){
     let img=document.createElement("img");
     img.style["margin-bottom"]="15px";
+    img.addEventListener("load",function(){
+      let ratio=img.height/img.width;
+      let maxw=window.innerWidth*0.8;
+      let maxh=window.innerHeight*0.3;
+      if(maxw*ratio>maxh){
+        img.width=maxh/ratio;
+        img.height=maxh;
+      }else if(maxh/ratio>maxw){
+        img.height=maxw*ratio;
+        img.width=maxw;
+      }
+    });
     img.src=options.image;
     wrapper.append(img);
     wrapper.append(document.createElement("br"));
-    let ratio=img.height/img.width;
-    let maxw=window.innerWidth*0.8;
-    let maxh=window.innerHeight*0.3;
-    if(maxw*ratio>maxh){
-      img.width=maxh/ratio;
-      img.height=maxh;
-    }else if(maxh/ratio>maxw){
-      img.height=maxw*ratio;
-      img.width=maxw;
-    }
   }
 
   // Handle text mode
