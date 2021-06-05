@@ -10,14 +10,20 @@ lodr.progression=0; // The number of progress() calls you've made
 /*
   Function to call when you progress through loading script
 */
-lodr.progress=function(){
+lodr.progress=function(inc){
   if(!lodr.root){
     throw "Cannot progress before you've initialized the loading screen";
   }
-  lodr.progression++;
+  if(inc===undefined){
+    inc=1;
+  }
+  lodr.progression+=inc;
   let percent=Math.round(100*lodr.progression/lodr.goal);
-  lodr.root.querySelector("span").innerHTML=lodr.getText(percent);
-  if(lodr.progression>=lodr.goal){
+  lodr.root.querySelector(".text").innerHTML=lodr.getText(percent);
+  if(lodr.progression>lodr.goal){
+    lodr.progression=lodr.goal;
+  }
+  if(lodr.progression===lodr.goal){
     let timer;
     function fadeOut(){
       let opacity=Number(window.getComputedStyle(lodr.root).getPropertyValue("opacity"));
@@ -28,18 +34,21 @@ lodr.progress=function(){
         clearInterval(timer);
       }
     }
-    timer=setInterval(fadeOut,100);
+    timer=setInterval(fadeOut,50);
   }
 }
 
 /*
   Function to call when you add another goal for the loading process
 */
-lodr.goalpost=function(){
+lodr.goalpost=function(inc){
   if(lodr.progression){
     throw "Cannot add a goal after Lodr progress has started";
   }
-  lodr.goal++;
+  if(inc===undefined){
+    inc=1;
+  }
+  lodr.goal+=inc;
 }
 
 /*
@@ -51,7 +60,7 @@ lodr.load=function(options){
   let div=document.createElement("div");
   div.style["background-color"]=options.background || 0xffffff;
   if(options.fontFamily) div.style["font-family"]=options.fontFamily;
-  if(options.fontStyle) div.style["font-style"]=options.fontStyle;
+  if(options.fontWeight) div.style["font-weight"]=options.fontWeight;
   if(options.fontSize) div.style["font-size"]=options.fontSize;
   if(options.color) div.style["color"]=options.color;
   div.style["text-align"]="center";
@@ -61,13 +70,20 @@ lodr.load=function(options){
   div.style["left"]=0;
   div.style["top"]=0;
 
+  // Add the positioning wrapper
+  let wrapper=document.createElement("div");
+  wrapper.style["transform"]="translateY(-50%)";
+  wrapper.style["position"]="relative";
+  wrapper.style["top"]="50%";
+  div.append(wrapper);
+
   // Add image
   if(options.image){
     let img=document.createElement("img");
     img.style["margin-bottom"]="15px";
     img.src=options.image;
-    div.append(img);
-    div.append(document.createElement("br"));
+    wrapper.append(img);
+    wrapper.append(document.createElement("br"));
     let ratio=img.height/img.width;
     let maxw=window.innerWidth*0.8;
     let maxh=window.innerHeight*0.3;
@@ -85,7 +101,8 @@ lodr.load=function(options){
     lodr.getText=options.text || (percent => `${percent}%`);
     let text=document.createElement("span");
     text.innerHTML=lodr.getText(0);
-    div.append(text);
+    text.className="text";
+    wrapper.append(text);
   }
 
   // Handle bar mode
