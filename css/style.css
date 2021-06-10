@@ -1,0 +1,143 @@
+:root {
+  --white: #ffffff;
+  --dark-blue: #090032;
+  --light-blue: #7152ff;
+}
+
+body {
+  background-color: var(--white);
+  font-family: sans-serif;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* ABOUT API  */
+
+.about-api {
+  background-color: var(--dark-blue);
+  height: 15px;
+  padding-bottom: 30px;
+}
+
+.about-api h1 {
+  text-align: center;
+  padding-bottom: 25px;
+  color: var(--white);
+}
+
+/* NAVIGATION  */
+
+.navigation {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  background-color: var(--dark-blue);
+}
+
+.navigation .left-side img {
+  width: 200px;
+}
+
+.navigation .right-side {
+  background-color: var(--dark-blue);
+}
+
+.navigation .right-side p {
+  font-size: 20px;
+  padding-right: 40px;
+  color: var(--white);
+}
+
+/* ABOUT SECTION  */
+
+
+.about {
+  background-color: var(--white);
+}
+
+.about h1 {
+  color: var(--dark-blue);
+}
+
+.about p {
+  color: var(--dark-blue);
+  font-size: 20px;
+}
+
+/* API SECTION  */
+
+.api h1 {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.api {
+  display: grid;
+  background-color: var(--dark-blue);
+}
+
+.api p {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.api-data {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}
+
+.api-data .data p {
+  color: var(--white);
+  padding-left: 50px;
+  font-size: 20px;
+}
+
+.api .api-list-data {
+  color: var(--white);
+}
+
+.api .api-list-data ul li p {
+  color: var(--white);
+  font-size: 20px;
+}
+
+/* DOWNLOAD SECTION  */
+
+.download {
+  /* background-color: var(--white); */
+  display: grid;
+}
+
+.download h1 {
+  color: var(--dark-blue);
+}
+
+.download-source {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}
+
+.download-source .download-info img {
+  width: 100%;
+  width: 200px;
+  padding-left: 120px;
+  padding-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-blue);
+  text-align: center;
+  padding: 15px 0;
+}
+.footer h3 {
+  margin: 0;
+  color: var(--white);
+}
+.footer a {
+  text-decoration: none;
+  color: var(--white);
+}
+.footer a:hover {
+  text-decoration: underline;
+}
