@@ -14,28 +14,36 @@ body {
 
 /* ABOUT API  */
 
-.about-api {
+.aboutapi {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
   background-color: var(--dark-blue);
-  height: 15px;
-  padding-bottom: 30px;
+  margin-top: 0px;
 }
 
-.about-api h1 {
+.about-api {
+  background-color: var(--dark-blue);
+}
+
+.about-api p {
   text-align: center;
   padding-bottom: 25px;
   color: var(--white);
+  font-size: 20px;
 }
 
 /* NAVIGATION  */
 
 .navigation {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 30% 70%;
   background-color: var(--dark-blue);
 }
 
 .navigation .left-side img {
   width: 200px;
+  padding-left: 40px;
+  align-content: center;
 }
 
 .navigation .right-side {
@@ -50,9 +58,9 @@ body {
 
 /* ABOUT SECTION  */
 
-
 .about {
   background-color: var(--white);
+  padding-top: 10px;
 }
 
 .about h1 {
@@ -62,6 +70,8 @@ body {
 .about p {
   color: var(--dark-blue);
   font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* API SECTION  */
@@ -74,6 +84,8 @@ body {
 .api {
   display: grid;
   background-color: var(--dark-blue);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .api p {
@@ -90,6 +102,10 @@ body {
   color: var(--white);
   padding-left: 50px;
   font-size: 20px;
+}
+
+.api-data .data h3 {
+  color: var(--white);
 }
 
 .api .api-list-data {
@@ -118,10 +134,14 @@ body {
 }
 
 .download-source .download-info img {
-  width: 100%;
   width: 200px;
   padding-left: 120px;
   padding-bottom: 30px;
+}
+
+.download-source .download-info .download-img {
+  width: 150px;
+  align-items: center;
 }
 
 /* Footer */
@@ -136,7 +156,7 @@ body {
 }
 .footer a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--light-blue);
 }
 .footer a:hover {
   text-decoration: underline;
