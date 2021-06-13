@@ -18,14 +18,14 @@ body {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   background-color: var(--dark-blue);
-  margin-top: 0px;
 }
 
 .about-api {
   background-color: var(--dark-blue);
 }
 
-.about-api p {
+.about-api h1 {
+  margin-top: 0px;
   text-align: center;
   padding-bottom: 25px;
   color: var(--white);
@@ -42,8 +42,8 @@ body {
 
 .navigation .left-side img {
   width: 200px;
-  padding-left: 40px;
-  align-content: center;
+  padding-left: 90px;
+  text-align: center;
 }
 
 .navigation .right-side {
@@ -65,13 +65,14 @@ body {
 
 .about h1 {
   color: var(--dark-blue);
+  padding-left: 30px;
 }
 
 .about p {
   color: var(--dark-blue);
   font-size: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 /* API SECTION  */
@@ -79,6 +80,7 @@ body {
 .api h1 {
   background-color: var(--dark-blue);
   color: var(--white);
+  padding-left: 30px;
 }
 
 .api {
@@ -91,6 +93,8 @@ body {
 .api p {
   color: var(--white);
   font-size: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .api-data {
@@ -102,19 +106,27 @@ body {
   color: var(--white);
   padding-left: 50px;
   font-size: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .api-data .data h3 {
   color: var(--white);
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .api .api-list-data {
   color: var(--white);
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .api .api-list-data ul li p {
   color: var(--white);
   font-size: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 /* DOWNLOAD SECTION  */
@@ -126,6 +138,7 @@ body {
 
 .download h1 {
   color: var(--dark-blue);
+  padding-left: 30px;
 }
 
 .download-source {
@@ -137,11 +150,12 @@ body {
   width: 200px;
   padding-left: 120px;
   padding-bottom: 30px;
+  text-align: center;
 }
 
 .download-source .download-info .download-img {
-  width: 150px;
-  align-items: center;
+  width: 125px;
+  text-align: center;
 }
 
 /* Footer */
