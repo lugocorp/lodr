@@ -61,14 +61,14 @@
       <div class="api-data">
         <div class="data">
           <h3>lodr.goalpost(x)</h3>
-          <p>
+          <p class="data-head">
             This function increments the library's expectation for resource loading.
             You call this function to increase the number of loading steps that the library expects by <i>x</i>, or <i>1</i> if <i>x</i> is <i>undefined</i>.
           </p>
         </div>
         <div class="data">
           <h3>lodr.load(config)</h3>
-          <p>
+          <p  class="data-head">
             This function configures the loading screen and displays it.
             You should call it after you've made all your <i>lodr.goalpost()</i> calls, but before any <i>lodr.progress()</i> calls.
             The <i>config</i> parameter is an object that is detailed below.
@@ -76,7 +76,7 @@
         </div>
         <div class="data">
           <h3>lodr.progress(x)</h3>
-          <p>
+          <p  class="data-head">
             This function increments the number of loaded resources in the library.
             You call it to tell the load screen how far along your progress is.
             The number of loaded steps gets incremented by <i>x</i>, or <i>1</i> if <i>x</i> is <i>undefined</i>.

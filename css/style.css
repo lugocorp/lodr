@@ -56,6 +56,23 @@ body {
   color: var(--white);
 }
 
+@media only screen and (max-width: 750px) {
+  .navigation > .left-side,
+  .navigation > .right-side {
+    text-align: center;
+  }
+  .navigation {
+    grid-template-columns: 100%;
+  }
+  .navigation .left-side img {
+    text-align: center;
+    padding-right: 90px;
+  }
+  .navigation .right-side p {
+    padding-left: 25px;
+  }
+}
+
 /* ABOUT SECTION  */
 
 .about {
@@ -73,6 +90,13 @@ body {
   font-size: 20px;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+@media only screen and (max-width: 750px) {
+  .about {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 
 /* API SECTION  */
@@ -99,7 +123,7 @@ body {
 
 .api-data {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 29% 29% 29%;
 }
 
 .api-data .data p {
@@ -112,7 +136,7 @@ body {
 
 .api-data .data h3 {
   color: var(--white);
-  padding-left: 40px;
+  padding-left: 60px;
   padding-right: 40px;
 }
 
@@ -127,6 +151,23 @@ body {
   font-size: 20px;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.api-data .data .data-head {
+  padding-left: 80px;
+}
+
+@media only screen and (max-width: 750px) {
+  .api {
+    padding-right: 10px;
+    padding-left: 10px;
+    display: block;
+  }
+  .api-data {
+    padding-right: 10px;
+    padding-left: 10px;
+    display: block;
+  }
 }
 
 /* DOWNLOAD SECTION  */
@@ -156,6 +197,18 @@ body {
 .download-source .download-info .download-img {
   width: 125px;
   text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+  .download-source {
+    display: block;
+  }
+  .download-source .download-info .download-img {
+    text-align: center;
+  }
+  .download-source .download-info img {
+    text-align: center;
+  }
 }
 
 /* Footer */
