@@ -12,24 +12,26 @@ body {
   margin: 0;
 }
 
-/* ABOUT API  */
-
-.aboutapi {
+/* Header */
+.headers {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 33% 34% 33%;
   background-color: var(--dark-blue);
+  padding:15px 0;
 }
-
-.about-api {
-  background-color: var(--dark-blue);
-}
-
-.about-api h1 {
+.headers h1{
+  font-size:30px;
   margin-top: 0px;
   text-align: center;
   padding-bottom: 25px;
   color: var(--white);
-  font-size: 20px;
+}
+.headers a{
+  text-decoration:none;
+}
+.headers h1:hover{
+  text-decoration:underline;
+  cursor:pointer;
 }
 
 /* NAVIGATION  */
@@ -38,12 +40,14 @@ body {
   display: grid;
   grid-template-columns: 30% 70%;
   background-color: var(--dark-blue);
+  padding-bottom:30px;
 }
 
 .navigation .left-side img {
-  width: 200px;
-  padding-left: 90px;
   text-align: center;
+  display: block;
+  margin: auto;
+  width: 200px;
 }
 
 .navigation .right-side {
@@ -77,7 +81,7 @@ body {
 
 .about {
   background-color: var(--white);
-  padding-top: 10px;
+  padding: 25px 0;
 }
 
 .about h1 {
@@ -104,40 +108,35 @@ body {
 .api h1 {
   background-color: var(--dark-blue);
   color: var(--white);
-  padding-left: 30px;
 }
 
 .api {
   display: grid;
   background-color: var(--dark-blue);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 25px 40px;
 }
 
 .api p {
   color: var(--white);
   font-size: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 .api-data {
   display: grid;
-  grid-template-columns: 29% 29% 29%;
+  grid-template-columns: 33% 34% 33%;
+}
+
+.api-data .data{
+  padding:0 30px;
 }
 
 .api-data .data p {
   color: var(--white);
-  padding-left: 50px;
   font-size: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 .api-data .data h3 {
   color: var(--white);
-  padding-left: 60px;
-  padding-right: 40px;
 }
 
 .api .api-list-data {
@@ -149,12 +148,6 @@ body {
 .api .api-list-data ul li p {
   color: var(--white);
   font-size: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-.api-data .data .data-head {
-  padding-left: 80px;
 }
 
 @media only screen and (max-width: 750px) {
@@ -175,6 +168,7 @@ body {
 .download {
   /* background-color: var(--white); */
   display: grid;
+  padding:25px 0;
 }
 
 .download h1 {
@@ -184,14 +178,24 @@ body {
 
 .download-source {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 33% 34% 33%;
+}
+.download-source .download-info{
+  position:relative;
+  padding:30px 0;
 }
 
 .download-source .download-info img {
   width: 200px;
-  padding-left: 120px;
-  padding-bottom: 30px;
-  text-align: center;
+  margin: auto;
+  display:block;
+  position:relative;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.download-source .download-info img:hover{
+  cursor:pointer;
 }
 
 .download-source .download-info .download-img {

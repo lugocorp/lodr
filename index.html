@@ -3,19 +3,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="lodr.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Lödr</title>
   </head>
   <body>
-    <div class="aboutapi">
+    <div class="headers">
       <div class="about-api">
-        <h1>About</h1>
+        <a href="#about"><h1>About</h1></a>
       </div>
       <div class="about-api">
-        <h1>API</h1>
+        <a href="#api"><h1>API</h1></a>
       </div>
       <div class="about-api">
-        <h1>Download</h1>
+        <a href="#download"><h1>Download</h1></a>
       </div>
     </div>
     <div class="navigation">
@@ -30,7 +31,7 @@
         </p>
       </div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
       <h1>About</h1>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores aut
@@ -53,7 +54,7 @@
       </p>
     </div>
 
-    <div class="api">
+    <div class="api" id="api">
       <h1>API</h1>
       <p>
         There are only 3 functions in Lödr's API:
@@ -114,17 +115,23 @@
         </ul>
       </div>
     </div>
-    <div class="download">
+    <div class="download" id="download">
       <h1>Download</h1>
       <div class="download-source">
         <div class="download-info">
-          <img class="download-img" src="res/github.svg" alt="" />
+          <a href="https://github.com/lugocorp/lodr">
+            <img class="download-img" src="res/github.svg" title="GitHub" />
+          </a>
         </div>
         <div class="download-info">
-          <img src="res/npm.svg.png" alt="" />
+          <a href="">
+            <img src="res/npm.svg.png" title="NPM" />
+          </a>
         </div>
         <div class="download-info">
-          <img class="download-img" src="res/download.jpg" alt="" />
+          <a href="lodr.min.js">
+            <img class="download-img" src="res/download.jpg" title="Download source" />
+          </a>
         </div>
       </div>
     </div>
