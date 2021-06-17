@@ -88,6 +88,11 @@
           </li>
           <li>
             <p>
+              <b>image</b>: string - the <i>src</i> of an image to put on the loader screen
+            </p>
+          </li>
+          <li>
+            <p>
               <b>background</b>: string - sets the CSS <i>background-color</i> property for the background of the loader screen
             </p>
           </li>
@@ -134,7 +139,7 @@
         </div>
         <div class="download-info">
           <a href="lodr.min.js">
-            <img class="download-img" src="res/download.jpg" title="Download source" />
+            <img class="download-img" src="res/file.svg" title="Download source" />
           </a>
         </div>
       </div>
@@ -145,4 +150,23 @@
       </h3>
     </div>
   </body>
+  <script>
+    lodr.goalpost(10);
+    lodr.load({
+      image:"res/lodr-simple.svg",
+      background:"#090032",
+      color:"#ffffff",
+      mode:"bar"
+    });
+    setTimeout(lodr.progress,100);
+    setTimeout(lodr.progress,150);
+    setTimeout(lodr.progress,200);
+    setTimeout(lodr.progress,250);
+    setTimeout(lodr.progress,300);
+    setTimeout(lodr.progress,350);
+    setTimeout(lodr.progress,400);
+    setTimeout(lodr.progress,450);
+    setTimeout(lodr.progress,500);
+    setTimeout(lodr.progress,550);
+  </script>
 </html>
