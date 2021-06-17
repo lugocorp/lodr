@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="lodr.min.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Lödr</title>
   </head>
   <body>
@@ -34,23 +34,14 @@
     <div class="about" id="about">
       <h1>About</h1>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores aut
-        perspiciatis, ipsum provident dolor iusto quisquam praesentium omnis
-        debitis adipisci reiciendis. Nobis, quibusdam adipisci cumque eos sed
-        veritatis perspiciatis praesentium ipsam aliquam laboriosam aspernatur
-        placeat voluptatum nulla? Harum nesciunt, quisquam tempora, amet culpa
-        nam laudantium, voluptatem voluptates tempore quasi possimus ducimus
-        repudiandae saepe. Alias inventore consequuntur qui, quisquam debitis
-        ipsa nulla iste blanditiis doloribus vitae iure fugit expedita quo
-        voluptates provident dicta consectetur asperiores beatae doloremque est
-        aperiam! Sed, consequatur! Repellat provident omnis sint ratione
-        molestias aliquam quas ipsam delectus illo culpa consectetur distinctio
-        voluptatem in odio quasi vero officia, ab magnam. Harum nobis dolorum ad
-        repellendus quasi, maiores inventore iure perferendis veniam iste odit,
-        nesciunt magni quisquam? Voluptates aut nostrum porro! Ab saepe possimus
-        repellendus totam debitis optio odio dolor est tenetur corporis
-        voluptatibus, eum consequatur recusandae dicta perspiciatis! Assumenda
-        ipsa hic aspernatur atque minus, quasi omnis nobis tempore.
+        Lödr is a super lightweight JavaScript API for adding boot loader screens to your websites.
+        You simply include a single .js file to get started.
+        Once you've done that, you can use Lödr's three functions to configure and display a loading screen like the one you see on this site.
+      </p>
+      <p>
+        Boot loader screens are commonly seen on video games to signify who created them or what engines they used in development.
+        We at <a href="http://lugocorp.net">LugoCorp</a> decided they would look good on websites too.
+        So we created this tiny JS library to make our idea a reality.
       </p>
     </div>
 
@@ -92,24 +83,37 @@
         <ul>
           <li>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corporis, tempore.
+              <b>text</b>: (int) => string - <i>text</i> is a function that controls what text gets rendered based on the loading progress as a percentage (a number between 0 and 100)
             </p>
           </li>
-        </ul>
-        <ul>
           <li>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corporis, tempore.
+              <b>background</b>: string - sets the CSS <i>background-color</i> property for the background of the loader screen
             </p>
           </li>
-        </ul>
-        <ul>
           <li>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corporis, tempore.
+              <b>fontFamily</b>: string - sets the CSS <i>font-family</i> property for the loader screen
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>fontWeight</b>: string - sets the CSS <i>font-weight</i> property for the loader screen
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>fontSize</b>: string - sets the CSS <i>font-size</i> property for the loader screen
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>color</b>: string - sets the CSS <i>color</i> property for the loader screen
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>mode</b>: string - sets the mode for the boot screen (<i>text</i> for some loading message and <i>bar</i> for a progress bar)
             </p>
           </li>
         </ul>

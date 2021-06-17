@@ -12,6 +12,14 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--light-blue);
+}
+a:hover {
+  text-decoration: underline;
+}
+
 /* Header */
 .headers {
   display: grid;
@@ -211,11 +219,4 @@ body {
 .footer h3 {
   margin: 0;
   color: var(--white);
-}
-.footer a {
-  text-decoration: none;
-  color: var(--light-blue);
-}
-.footer a:hover {
-  text-decoration: underline;
 }
