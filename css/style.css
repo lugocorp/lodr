@@ -61,19 +61,11 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
-  .navigation > .left-side,
-  .navigation > .right-side {
-    text-align: center;
-  }
   .navigation {
     grid-template-columns: 100%;
   }
-  .navigation .left-side img {
-    text-align: center;
-    padding-right: 90px;
-  }
-  .navigation .right-side p {
-    padding-left: 25px;
+  .navigation .right-side {
+    padding: 0 10px;
   }
 }
 
@@ -97,7 +89,7 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
-  .about {
+  .about p {
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -141,8 +133,7 @@ body {
 
 .api .api-list-data {
   color: var(--white);
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0 40px;
 }
 
 .api .api-list-data ul li p {
@@ -152,14 +143,17 @@ body {
 
 @media only screen and (max-width: 750px) {
   .api {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 25px 10px;
     display: block;
   }
   .api-data {
-    padding-right: 10px;
-    padding-left: 10px;
-    display: block;
+    grid-template-columns: 100%;
+  }
+  .api-data .data{
+    padding:0;
+  }
+  .api .api-list-data{
+    padding:0;
   }
 }
 
@@ -186,12 +180,12 @@ body {
 }
 
 .download-source .download-info img {
-  width: 200px;
+  transform: translateY(-50%);
+  position: relative;
+  display: block;
   margin: auto;
-  display:block;
-  position:relative;
-  top:50%;
-  transform:translateY(-50%);
+  width: 200px;
+  top: 50%;
 }
 
 .download-source .download-info img:hover{
@@ -200,18 +194,11 @@ body {
 
 .download-source .download-info .download-img {
   width: 125px;
-  text-align: center;
 }
 
 @media only screen and (max-width: 750px) {
   .download-source {
-    display: block;
-  }
-  .download-source .download-info .download-img {
-    text-align: center;
-  }
-  .download-source .download-info img {
-    text-align: center;
+    grid-template-columns: 100%;
   }
 }
 
