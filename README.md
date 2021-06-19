@@ -1,4 +1,4 @@
-<img src="lodr.svg" height="300px"/>
+![Lödr logo](./lodr.svg)
 
 # Lödr
 This is LugoCorp's browser-based HTML loading screen library.

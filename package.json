@@ -1,9 +1,13 @@
 {
   "name": "lodr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A loading screen mini-library for the browser",
   "scripts": {
     "minify": "uglifyjs lodr.js --compress --mangle --warn --output lodr.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lugocorp/lodr.git"
   },
   "author": "Alex Lugo",
   "devDependencies": {},
